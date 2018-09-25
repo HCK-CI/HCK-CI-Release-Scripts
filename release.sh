@@ -1,7 +1,7 @@
 #!/bin/sh
 
 RELEASE_BRANCH=master
-RELEASE_DIR=InstallAutoHCK
+RELEASE_DIR=HCK_CI
 AUTO_HCK=AutoHCK
 
 rm -rf ${RELEASE_DIR}
@@ -81,6 +81,9 @@ do
   fi
   cd -
 done
+
+mkdir ${RELEASE_DIR}/workspace
+mkdir ${RELEASE_DIR}/images
 
 # Copy the gems
 mkdir ${RELEASE_DIR}/gems
