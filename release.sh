@@ -87,8 +87,6 @@ mkdir ${RELEASE_DIR}/images
 
 # Copy the gems
 mkdir ${RELEASE_DIR}/gems
-mkdir ${RELEASE_DIR}/workspace
-mkdir ${RELEASE_DIR}/images
 
 # Build and copy internal gems
 for gem in "${internal_gems[@]}"
@@ -112,6 +110,10 @@ cd -
 
 # Rename example triggers file
 mv ${RELEASE_DIR}/${AUTO_HCK}/triggers.yml.example ${RELEASE_DIR}/${AUTO_HCK}/triggers.yml
+
+# Move toolsHCK script to AutoHCK
+mv ${RELEASE_DIR}/toolsHCK/toolsHCK.ps1 ${RELEASE_DIR}/${AUTO_HCK}/.
+rm -rf ${RELEASE_DIR}/toolsHCK
 
 # Copy release notes
 cp release_notes.txt ${RELEASE_DIR}
