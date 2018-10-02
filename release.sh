@@ -13,7 +13,7 @@ fi
 
 # Array of the repositories' names, URLs and branchs for the release
 repositories=(${AUTO_HCK} \
-    "https://github.com/Daynix/AutoHCK2.git" \
+    "https://github.com/HCK-CI/AutoHCK.git" \
     ${RELEASE_BRANCH} \
     "VirtHCK" \
     "https://github.com/daynix/VirtHCK.git" \
