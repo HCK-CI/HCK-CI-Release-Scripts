@@ -3,7 +3,7 @@
 RELEASE_BRANCH=master
 RELEASE_DIR=HCK_CI
 AUTO_HCK=AutoHCK
-
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 rm -rf ${RELEASE_DIR}
 
 if [ $1 == '--clean' ]
@@ -116,5 +116,5 @@ mv ${RELEASE_DIR}/toolsHCK/toolsHCK.ps1 ${RELEASE_DIR}/${AUTO_HCK}/.
 rm -rf ${RELEASE_DIR}/toolsHCK
 
 # Copy release notes
-cp release_notes.txt ${RELEASE_DIR}
+cp ${SCRIPT_DIR}/release_notes.txt ${RELEASE_DIR}
 
