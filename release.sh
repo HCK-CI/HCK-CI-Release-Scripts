@@ -18,6 +18,9 @@ repositories=(${AUTO_HCK} \
     "VirtHCK" \
     "https://github.com/daynix/VirtHCK.git" \
     ${RELEASE_BRANCH} \
+    "DropboxBuildLogUploader" \
+    "https://github.com/HCK-CI/DropboxBuildLogUploader.git" \
+    ${RELEASE_BRANCH} \
     "HLK-Setup-Scripts" \
     "https://github.com/HCK-CI/HLK-Setup-Scripts.git" \
     ${RELEASE_BRANCH} \
@@ -107,6 +110,9 @@ do
   gem fetch ${external_gems[i]} -v ${external_gems[i+1]}
 done
 cd -
+
+# Move DropboxBuildLogUploader into AutoHCK
+mv ${RELEASE_DIR}/DropboxBuildLogUploader/dropbox_uploader.rb ${RELEASE_DIR}/${AUTO_HCK}/.
 
 # Rename example triggers file
 mv ${RELEASE_DIR}/${AUTO_HCK}/triggers.yml.example ${RELEASE_DIR}/${AUTO_HCK}/triggers.yml
