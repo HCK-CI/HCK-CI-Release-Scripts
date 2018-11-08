@@ -37,6 +37,24 @@ We tested on 2.4.3 and we assume it can work on later versions as well.
   3. Clone and compile QEMU.
   4. Configure base parameters in AutoHCK config.json file
 
+Dropbox integration
+-------------------
+Auto_hck allows integration with Dropbox, automatically uploading results and logs to specific location.
+to do that you will need to create auth2 token
+1. Go to https://www.dropbox.com/developers/apps and click on 'Create app'
+2. Select 'Dropbox API', 'Full Dropbox' access type and give it a unique name.
+3. Click on 'Generated access token'.
+4. Copy the token to the installation script under DROPBOX_TOKEN.
+
+Github integration
+------------------
+When specifing a pull request auto_hck can mark test results on github and link to dropbox logs folder.
+to do that you will need to create a personal access token.
+1. Go to https://github.com/settings/tokens and click on 'Generate new token'
+2. Give it a name, select: repo:status and click 'Generate token'
+3. Copy the token and username to the installation script under GITHUB_USER GITHUB_TOKEN.
+
+
 Images preperation
 ------------------
 This is similar to making regular HLK/HCK studio and clients images with with few additionals configurations, scripts with detailed instructions available at HCK_CI/HLK-Setup-Scripts/.
@@ -110,23 +128,6 @@ The provided `platforms.json` file is already supplied with all windows version,
     }
   },
 ```
-
-Dropbox integration
--------------------
-Auto_hck allows integration with Dropbox, automatically uploading results and logs to specific location.
-to do that you will need to create auth2 token
-1. Go to https://www.dropbox.com/developers/apps and click on 'Create app'
-2. Select 'Dropbox API', 'Full Dropbox' access type and give it a unique name.
-3. Click on 'Generated access token'.
-4. Copy the token to the installation script under DROPBOX_TOKEN.
-
-Github integration
-------------------
-When specifing a pull request auto_hck can mark test results on github and link to dropbox logs folder.
-to do that you will need to create a personal access token.
-1. Go to https://github.com/settings/tokens and click on 'Generate new token'
-2. Give it a name, select: repo:status and click 'Generate token'
-3. Copy the token and username to the installation script under GITHUB_USER GITHUB_TOKEN.
 
 Usage
 -----
