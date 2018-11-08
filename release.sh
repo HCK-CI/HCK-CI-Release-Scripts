@@ -121,6 +121,12 @@ mv ${RELEASE_DIR}/${AUTO_HCK}/triggers.yml.example ${RELEASE_DIR}/${AUTO_HCK}/tr
 mv ${RELEASE_DIR}/toolsHCK/toolsHCK.ps1 ${RELEASE_DIR}/${AUTO_HCK}/.
 rm -rf ${RELEASE_DIR}/toolsHCK
 
+mv ${RELEASE_DIR} temp
+mkdir -p ${RELEASE_DIR}
+mv temp ${RELEASE_DIR}/HCK_CI
+
 # Copy release notes
 cp release_notes.txt ${RELEASE_DIR}
 
+# Copy installation script
+cp install_script.sh ${RELEASE_DIR}/install.sh
