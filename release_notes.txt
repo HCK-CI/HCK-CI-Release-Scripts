@@ -24,23 +24,18 @@ Archive content
 
 Deployment
 ----------
-* You will need QEMU from https://github.com/qemu/qemu
-
 * Check that you have ruby installed on the host. Ruby installation instructions (better use RVM): https://rvm.io
 We tested on 2.4.3 and we assume it can work on later versions as well.
 
 * Extract the archive to HCK_CI directory
 
-* Install gem dependency - From gems directory run "gem install *" (this will install all the needed gems).
+* Open Install.sh file and update the configurable values.
 
-* AutoHCK dependencies - In AutoHCK/config.json file direct the following configurations to the correct full paths:
-  * workspace_path - HCK-CI/workspace (here all AutoHCK tests logs, images snapshots will be saved)
-  * virthck_path - HCK-CI/VirtHCK
-  * images_path - HCK-CI/images (studio and clients images will be saved here)
-  * toolshck_path - HCK-CI/AutoHCK/toolsHCK.ps1
-  * qemu_bin, qemu_img - path to QEMU builds requested earlier.
-
-* Run HCK-CI/OpenDHCPServerSetup/opendhcpserverSetup.sh to setup and configure the DHCP server.
+* Run ./Install.sh, the installation will do the following:
+  1. Copy package to destination folder.
+  2. Install gem dependencies.
+  3. Clone and compile QEMU.
+  4. Configure base parameters in AutoHCK config.json file
 
 Images preperation
 ------------------
@@ -122,7 +117,8 @@ Auto_hck allows integration with Dropbox, automatically uploading results and lo
 to do that you will need to create auth2 token
 1. Go to https://www.dropbox.com/developers/apps and click on 'Create app'
 2. Select 'Dropbox API', 'Full Dropbox' access type and give it a unique name.
-3. Click on 'Generated access token' and copy the token to config.json file.
+3. Click on 'Generated access token'.
+4. Copy the token to the installation script under DROPBOX_TOKEN.
 
 Github integration
 ------------------
@@ -130,7 +126,7 @@ When specifing a pull request auto_hck can mark test results on github and link 
 to do that you will need to create a personal access token.
 1. Go to https://github.com/settings/tokens and click on 'Generate new token'
 2. Give it a name, select: repo:status and click 'Generate token'
-3. Copy the token to the config.json file.
+3. Copy the token and username to the installation script under GITHUB_USER GITHUB_TOKEN.
 
 Usage
 -----

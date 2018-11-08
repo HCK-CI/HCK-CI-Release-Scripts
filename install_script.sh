@@ -20,9 +20,25 @@ GITHUB_LOGIN=
 GITHUB_TOKEN=
 DROPBOX_TOKEN=
 
-if [ -d "$INSTALL_PATH" ]; then
+if [ -z "$GITHUB_REPO" ]; then
+  echo "WARNING: github repository value is empty"
+fi
+
+if [ -z "$GITHUB_LOGIN" ]; then
+  echo "WARNING: github login value is empty"
+fi
+
+if [ -z "$GITHUB_TOKEN" ]; then
+  echo "WARNING: github token value is empty"
+fi
+
+
+if [ -z "$DROPBOX_TOKEN" ]; then
+  echo "WARNING: Dropbox token value is empty"
+fi
+
+if [ -z "$INSTALL_PATH" ]; then
   echo "Installation path Already exists."
-  exit
 fi
 
 if [ -z "$GITHUB_REPO" ]; then
