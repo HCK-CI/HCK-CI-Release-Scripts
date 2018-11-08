@@ -124,3 +124,5 @@ rm -rf ${RELEASE_DIR}/toolsHCK
 # Copy release notes
 cp release_notes.txt ${RELEASE_DIR}
 
+# Copy installation script
+cp install_script.sh ${RELEASE_DIR}/install.sh
