@@ -145,5 +145,5 @@ Optional:
 ### Examples
 ```
 ./auto_hck -t Balloon-Win10x86 -p /home/hck-ci/balloon/win10/x86
-./auto_hck -t NetKVM-Win10x64 -d /home/hck-ci/workspace -d /path/to/diff.txt
-./auto_hck -t viostor-Win10x64 -d /home/hck-ci/viostor -d /path/to/diff.txt -c ec3da560827922e5a82486cf19cd9c27e95455a9
+./auto_hck -t NetKVM-Win10x64 -p /home/hck-ci/workspace -d /path/to/diff.txt
+./auto_hck -t viostor-Win10x64 -p /home/hck-ci/viostor -d /path/to/diff.txt -c ec3da560827922e5a82486cf19cd9c27e95455a9
