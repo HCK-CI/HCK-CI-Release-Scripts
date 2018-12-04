@@ -105,9 +105,14 @@ l
     "github_credentials": {
       "login": "$GITHUB_LOGIN",
       "password": "$GITHUB_TOKEN"
-    },
-    "dropbox_token": "$dropbox_token"
+    }
 }
+EOF
+
+cat > $INSTALL_PATH/AutoHCK/env.rc <<EOF
+export AUTOHCK_DROPBOX_TOKEN=$DROPBOX_TOKEN
+export AUTOHCK_GITHUB_LOGIN=$GITHUB_LOGIN
+export AUTOHCK_GITHUB_TOKEN=$GITHUB_TOKEN
 EOF
 
 echo "Intallation finished."
