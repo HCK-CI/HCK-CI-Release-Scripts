@@ -58,7 +58,7 @@ if [[ "$INSTALL_QEMU" == "yes" ]]; then
   ./configure --disable-docs --target-list=x86_64-softmmu
   make -j
   cd -
-  qemu=$INSTALL_PATH/x86_64-softmmu/qemu-system-x86_64
+  qemu_bin=$INSTALL_PATH/x86_64-softmmu/qemu-system-x86_64
   qemu_img=$INSTALL_PATH/qemu_img
   ivshmem_server=$INSTALL_PATH/ivshmem_server
 fi
@@ -80,8 +80,8 @@ l
     "workspace_path": "$INSTALL_PATH/workspace",
     "virthck_path": "$INSTALL_PATH/VirtHCK",
     "images_path": "$INSTALL_PATH/images",
-    "qemu_img": "$qemu_bin",
-    "qemu_bin": "$qemu_img",
+    "qemu_img": "$qemu_img",
+    "qemu_bin": "$qemu_bin",
     "ivshmem_server_bin": "$ivshmem_server",
     "ip_segment": "192.168.0.",
     "id_range": [ 2, 90 ],
