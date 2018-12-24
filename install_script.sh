@@ -101,11 +101,7 @@ l
     "filesystem_tests_image": "$INSTALL_PATH/images/filesystem_tests_image.qcow2",
     "studio_username": "Administrator",
     "studio_password": "Qum5net.",
-    "repository": "$GITHUB_REPO",
-    "github_credentials": {
-      "login": "$GITHUB_LOGIN",
-      "password": "$GITHUB_TOKEN"
-    }
+    "repository": "$GITHUB_REPO"
 }
 EOF
 
