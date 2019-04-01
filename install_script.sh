@@ -102,7 +102,8 @@ l
     "studio_username": "Administrator",
     "studio_password": "Qum5net.",
     "repository": "$GITHUB_REPO",
-    "result_uploaders": [ "dropbox" ]
+    "result_uploaders": [ "dropbox" ],
+    "time_out": "9"
 }
 EOF
 
