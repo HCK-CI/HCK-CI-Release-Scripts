@@ -60,6 +60,8 @@ external_gems=("filelock" \
     "1.2.0" \
     "dropbox_api" \
     "0.1.12" \
+    "sqlite3" \
+    "1.4.0" \
     "faraday" \
     "0.12.2" \
     )
